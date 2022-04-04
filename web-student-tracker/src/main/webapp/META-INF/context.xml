@@ -1,0 +1,20 @@
+<Context>
+<!--a Tomcat specific file telling tomcat- how to connect to database--> 
+
+<!-- name = name of the resource (alias)-->
+<!-- auth = how we will authenticate, container = auth handled by Tomcat server-->
+<!-- type = the java interface we'll use to communicate with the pool. DataSource -> name of the connection pool-->
+<!-- max Active = max size of connection pool-->
+<!-- max Idle = 5 connections available if no users in the system-->
+<!-- max wait = how long someone can wait before they get a connection-->
+<!-- username and password to connect to mysql account-->
+<!-- driver class = the JDBC driver we placed in WEB-INF lib-->
+<!-- url = url to the database (in this case we're running the database on local host)-->
+  <Resource name="jdbc/web_student_tracker" 
+  			auth="Container" type="javax.sql.DataSource"
+               maxActive="20" maxIdle="5" maxWait="10000"
+               username="webstudent" password="webstudent" 
+               driverClassName="com.mysql.cj.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/web_student_tracker?useSSL=false&amp;serverTimezone=UTC"/>
+
+</Context>

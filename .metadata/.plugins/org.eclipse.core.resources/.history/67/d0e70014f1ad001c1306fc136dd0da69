@@ -1,0 +1,28 @@
+package com.luv2code.web.jdbc;
+
+public class Student {
+	private int id;
+	private String firstName;
+	private String lastName;
+	private String email;
+	
+	//constructor without having the id
+	public Student(String firstName, String lastName, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
+	//constructor with all information
+	public Student(int id, String firstName, String lastName, String email) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+	
+	
+
+}
